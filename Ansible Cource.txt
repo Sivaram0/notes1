@@ -1,0 +1,15 @@
+27/Dec/2022 – Click Here
+
+Ansible:
+1.Need of Ansible.
+
+2.Two Procedures of deployment : Procedural, Declarative
+
+3.Configuation management done by some tools :
+    Puppet,chef,ansible,salt,powershell DSC
+4.Cm server,Nodes  	
+5.pull based cm: chef,puppet
+6.push based cm: ansible, salt
+-----------
+7. What needs to provided to Ansible : playbooks,adhook
+
