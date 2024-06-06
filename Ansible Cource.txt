@@ -1,9 +1,9 @@
 27/Dec/2022 – Click Here
 
-Ansible:
+Ansible:sdfsd
 1.Need of Ansible.
 
-2.Two Procedures of deployment : Procedural, Declarative
+2.Two Procedures of depldfszdzsdoyment : Procedural, Declarative
 
 3.Configuation management done by some tools :dsdsf
     Puppet,chef,ansible,salt,powershell DSC
