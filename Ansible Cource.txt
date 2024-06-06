@@ -4,7 +4,7 @@ Ansible:sdfsd
 1.Need of Ansible.cxfgtfhfdfsddsfddfefdf
 
 2.Two Procedures of depldfszdzsdoyment : Procedural, Declarative
-
+sdfgsdfagsaf
 3.Configuation management done by some tools :dsdsf
     Puppet,chef,ansible,salt,powershell DSC
 4.Cm server,Nodes  	
