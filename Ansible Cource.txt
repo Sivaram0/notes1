@@ -5,9 +5,9 @@ Ansible:sdfsd
 
 2.Two Procedures of depldfszdzsdoyment : Procedural, Declarative
 sdfgsdfagsaf
-3.Configuation management done by some tools :dsdsf
+3.Configuation management done by some tools :dsdsffgfhgdfg
     Puppet,chef,ansible,salt,powershell DSC
-4.Cm server,Nodes  	
+4.Cm server,Nodes  	sdfzdf
 5.pull based cm: chef,puppetfdsfewr
 6.push based cm: ansible, salt
 -----------cs
