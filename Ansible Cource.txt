@@ -8,11 +8,12 @@ Ansible:
 3.Configuation management done by some tools :
     Puppet,chef,ansible,salt,powershell DSC
 4.Cm server,Nodes  	
-5.pull based cm: chef,puppet
+5.pull based cm: chef,puppetfdsf
 6.push based cm: ansible, salt
 -----------
 7. What needs to provided to Ansible : playbooks,adhook
 
 8.new precommit message
 
-9.oefksdnfsdfS
+9.oefksdnfsdfS 
+10.dsjfsdfdhgtkjlfdsfgsdfdgfdgvdsfewrrew
