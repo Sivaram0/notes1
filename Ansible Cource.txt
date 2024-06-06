@@ -17,3 +17,23 @@ sdfgsdfagsaf
 dfsfss
 9.oefksdnfsdfS dsfsd
 10.dsjfsdfdhgtkjlfdsfgsdfdgfdgvdsfewrrewkn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+commit_messages=$(git log --format=%s)
+echo "previous msgs:$commit_messages"
+commit_msg=$(cat "$1")
+echo "actual mesgges: $commit_msg"
