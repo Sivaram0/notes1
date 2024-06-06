@@ -10,7 +10,7 @@ Ansible:
 4.Cm server,Nodes  	
 5.pull based cm: chef,puppetfdsf
 6.push based cm: ansible, salt
------------
+-----------cs
 7. What needs to provided to Ansible : playbooks,adhook
 
 8.new precommit message
