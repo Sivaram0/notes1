@@ -1,10 +1,17 @@
 Purpose of databse is like manage the data means like store, insert,remove, add, modify the datafiles.
-Datafile: is combination of controlfile, Datafile, Redologfile
+
+DATABASE is combination of Controlfile+Redologfile+datafiles
+
 controlfile: is important binaryfile that records the physical structure of the database,it consists essiential metadata needed to the 
              database to operate
              This file plays very crucialrole during database startup , revocery process.
              looseing this file means database inoperative, so that we need to take backup of this file is very good practice
              Controlfile contains information like Database names,Database creation timestamp,Tablespace information,Datafile information,Redologfile
              Backup information, Recovery information
+
 Redologfile: is records all changes made to the database, These files are crucial for data Recovery and consistance database durability.
              
+Datafile: Datafiles are the physical files on disk that stores the actual data of the database,They are fundamental components in the database
+          Hold data
+
+ARCHICTURE OF DATABASE
