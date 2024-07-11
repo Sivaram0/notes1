@@ -44,4 +44,3 @@ Structurd Querry language:
   - create tablespace ruscomos_tablespace datafile '/u01/bsprod/oradata/bsprod/cosmodrom.dbf' size 5m, '/u01/bsprod/oradata/bsprod/cosmodrom1.dbf' size 10m;
   # create bigtablespace:
   - create bigfile tablespace nasa_bigspace datafile '/u01/bsprod/oradata/bsprod/applolo.dbf' size 25m;  // we can add up to 32TB space >><< smallfiles upto 32gb
-  # 
