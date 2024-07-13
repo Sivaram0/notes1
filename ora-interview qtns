@@ -2,3 +2,18 @@ brief me about your self?
 what is oracle database?
 Tell me about database architecture?
 Explain briefly about oracle server?
+Explain table, rows, columns, index ?
+what are the physical components of database?Explaim it each one?
+what are the database objects?
+what are the types of backups ? explain it briefly?
+what is the password file and why it's needed?
+how do you switch from init.ora to spfile?
+what are the different types of sql statements?
+how will you recover lost controlfile?
+what fo you mean by RMAN?
+Brief different table spaces ? explain it?
+how to find the database version ?
+what is view and table in databases?
+what is the keyword to get distinct records from the table?
+what are the methods for shutting the oracle database instance?
+Give important views used in oracle you have learned?
