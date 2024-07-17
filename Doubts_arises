@@ -1,0 +1,2 @@
+Can we move database file from one tablespace to another tablespace 
+Can we move tables, index from one database file to another in same tablespace , if its then why and what is the scenirio for this specialthing?
