@@ -1,2 +1,35 @@
+## create multiple datafiels in single tablespace descoverd;
+
 Can we move database file from one tablespace to another tablespace 
+
 Can we move tables, index from one database file to another in same tablespace , if its then why and what is the scenirio for this specialthing?
+
+Physical structure of tablespace vs logical structure of tablespace
+
+lsnrctl start bsprod
+
+spfile vs pfile && what are the actual intitalising parameters are taken in spfile and ptfile?
+
+what are the chances for  fail databases? 
+
+why we choose hot backup over coldbackup?
+
+why we choose oem other than cronjobs,  availble?
+
+in multitent database if db file is full, it results db crach, struck or may other bad circumstances around the dbfile, for that your suggestion is like
+move file to another location;
+why we need to move db files form one mount point to another , we already auto extension feature right; 
+
+------------------------------------------------
+conventional cold backup is also called as offline backup which means the backup taken when the database is shutdown state ,
+for this back up identify the sourcefile locations like  controlfile, datafile, redologfile locations and create destination file location to move these files,
+ensure database in shutdown mode, 
+---------------------------------------------------------
+conventional hot backup is also called as online backup means like backup happens db in online state ,yach of cource it will take much time compara to cold backup beasuce of db is in online state,
+comeing to the how to take back up here we go , one is ensure archive log mode shoud be enabled , then note down sequence number for backup archive log file, then intitalise backup mode,
+then take backup control file , redologfile, datafile to the destination directory from the source location , then disable the backup mode , then work around archivelog file , take backup the archivelogfile 
+same as like earlier backup, finally endup the archivelog mode
+this the what about conventional hot backup and how about backup happens 
+IS IT CORRECT EVERYTHING,CONFIRM ME? 
+-----------------------------------------------------------
+rman coldbackup steps create destination directory , switch to rman terminal using rman target/ ,and filallly apply backup database IT will backup the files ,IS IT CORRECT?
