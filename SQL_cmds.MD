@@ -3,7 +3,7 @@ Structurd Querry language:
 # for oracle database instance  querry details : 
   desc v$instance;
    # if you want all instance details 
-     select * from v$instance; (or) needed anythhing special replace * with required fields
+     select * from v$instance; (or) needed any thing special replace * with required fields
 # for oracle parameterfile querry details:
   desc v$parameter;
   select * from v$parameter; (or) needed anythhing special replace * with required fields
