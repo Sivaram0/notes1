@@ -18,3 +18,29 @@ what is the keyword to get distinct records from the table?
 what are the methods for shutting the oracle database instance?
 Give important views used in oracle you have learned?
 ______________________*_______*__________________________
+
+
+___//perfect//___
+
+1.User Management,
+2.Rman backup,
+3.Upgrade high level steps,
+4.DataGuard [],
+5.Active DataGuard [read only with apply mode],
+6.Archecture [memory,process,background process,storage arch],
+7.Select statement process steps...
+8.Patching[database patch , java patch], critical patch, batch set patch,software patch, release update patch,
+9.Every quarter patching happens " opatch entry, utrl script,
+10.Datapump [truncate, append,exclude,remap],
+11.multi tenent 19c [ ORACLE DB ]
+
+-------------------
+
+11. Real application cluster
+    Automatic Storage Management
+--------------------
+13. Linux Ubuntu
+
+
+# Roll forward
+# logwriter shipping
