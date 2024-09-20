@@ -47,6 +47,9 @@
 38. One oracle Block is equal to howmany OS blocks ?
 39. What are the different types of tablespaces ?
 40. When you create a user default in which tablespace the data is stored ?
+
+---------------------------------------------------------------------------------
+
 41. How to identify the default permanent tablespace of the database ?
 42. Can we change the default permanent tablespace ?
 42. How to make the tablespace offline/online/read only ? What happens when you put offline?
@@ -58,6 +61,9 @@
 48. What is the use of autoextention on ? where do you get the information of autoextention ?
 49. Can we Limit the autoextention ?
 50. What is the difference between resize and add datafile to the tablespace ?
+
+------------------------------------------------------------------------------
+
 51. How to add temporary datafile to temp tablespace ?
 52. Where do you get the information of tempfiles & temp tablespaces ?
 53. How to identify the default temporary tablespace of the database ?
@@ -68,6 +74,9 @@
 58. What is segment space management ?
 59. How to enable archivelog mode ?
 60. How to check the archivelog mode is enabled or disabled?
+
+-------------------------------------------------------------------
+
 61. What is AMM (Automatic memory management)?
 62. What is ASMM ?
 63. What is crash recovery ? who performs crash recovery ?
@@ -78,6 +87,9 @@
 68. What is the difference between truncate and delete ?
 69. What is RDBMS ?
 70. How to store the data ?
+
+---------------------------------------------------------------------------------
+
 71. How to check privileges assigned to a user ? How to check what are the privileges assigned to a role?How to what are the roles assigned to a user ? 
     How to roles in the database ?
 72. How to check the object level privileges ?. How to grant object level privilege to another user ?How to grant the quota to users ? 
