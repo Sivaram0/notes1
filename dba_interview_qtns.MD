@@ -39,10 +39,10 @@
 
 31. How to check free space of the tablespace ?
 32. How to check the used space of the tablespace ?
-33. What is block ?
-34. What is extent ?
-35. What is segment ?
-36. What is tablespace ?
+33. What is block ?What is extent ?What is segment ?What is tablespace ?
+34. 
+35. 
+36. 
 37. What is the size of OS block ?
 38. One oracle Block is equal to howmany OS blocks ?
 39. What are the different types of tablespaces ?
