@@ -20,7 +20,3 @@ webtech software solutions
 18.LIN: Local Interconnect Network, a communication protocol for in-vehicle networks.
 19.D Space: Provider of tools for developing and testing electronic control units (ECUs).
 20.JIRA: Project management and issue tracking tool.
-
-
-
-
