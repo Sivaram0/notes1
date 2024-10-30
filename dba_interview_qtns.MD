@@ -14,7 +14,7 @@
 11. What is the difference between ORACLE_BASE and ORACLE_HOME?
 12. What is the use of oratab file?
 13. How do you check if oracle software installed on a server?
-14. What is  Oracle database’s physical and logical structure ?
+14. What is  Oracle database's physical and logical structure ?
 15. What is the use of Control files ?
 16. What is the difference between SPFILE and PFILE?
 17. What is PGA(Program Global Area) ?
@@ -83,7 +83,7 @@
 64. Database is stopped unfortunately, we are not sure what happend , how to check ?
 65. How to identify the location of alertlog file ?
 66. What is PCT USED and PCT FREE ?
-67. Can i drop the tablespace ? Can i drop the datafile ?How to drop the schema or user ?
+67. Can i drop the tablespace ? Can i drop the datafile ? How to drop the schema or user ?
 68. What is the difference between truncate and delete ?
 69. What is RDBMS ?
 70. How to store the data ?
