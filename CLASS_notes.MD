@@ -85,3 +85,11 @@ SQL>alter tablespace xyz1data add datafile 'u01/bsprod/oradata/bsprod/newdile.db
 
 Change the existening file to auto extansible
 SQL> alter xyz1data datafile 'u01/bsprod/oradata/bsprod/newdile.dbf' autoextend on;
+
+------------------------------------------------------------------------
+
+cloning in Oracle Dba :
+cloning is like creating a database in isolation way to peroform testing, development, performance tuneing, bottel necks etc.
+one of the way to clone database is Auxilary clone , which involvs taking backup of database copy the backup piece to destination server and 
+make changes in the pfile ex: db name, controlfile location , archive location etc, then recover the db file shutdown and startup after set env variable in instance level 
+is it right way ? 

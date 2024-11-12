@@ -49,3 +49,12 @@ Structurd Querry language:
 
 # For different file locations EX:alert logfile,trace file  
   select value from v$diag_info;
+
+
+
+Rman cold Backup Steps:
+Make a directory of the backup location : EX: mkdir -p '/u01/bsprod/oradata/bsprod/rman_hot';
+connect to Rman : rman target/;
+configure the path to the rman : configure channel device type disk format '/u01/bsprod/oradata/bsprod/rman_hot/backup_%u_%t.rman';
+take backup : backup database;
+Ensure database should be in mount mode , which means users can't perform any operations in that particular operations;
