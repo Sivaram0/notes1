@@ -9,11 +9,16 @@ What is optimization in RMAN?
 What is the use of AUTOBACKUP ON controlfile?
 What is the use of parallelism in RMAN ?
 What is compression in RMAN ?
-What  set MAXSETSIZE in RMAN ?
-What is SNAPSHOT controlfile ?
+What set MAXSETSIZE in RMAN ?
+What is SNAPSHOT controlfile ? 
 what is the difference between obsolete,expired,validate?
+`Expaired: A backup or image copy is expired when RMAN cannot find it at its expected location (it may have been manually deleted or lost).`
+`CROSSCHECK BACKUP;LIST EXPIRED BACKUP;DELETE EXPIRED BACKUP;`
+`Validate: The validate operation checks the integrity of the specified backup files or database files without actually performing a restore.`
+`BACKUP VALIDATE DATABASE;RESTORE DATABASE VALIDATE;`
 What is the use of crosscheck and obsolete command?
 How to check RMAN backup status ?
+`V$RMAN_BACKUP_JOB_DETAILS`
 What is the difference between incremental Level 0 and full backup ?
 What is the backup strategy ?
 What is the difference between incremental differential level 1, incremental cumulative level 1?
@@ -65,19 +70,26 @@ How to do transport tablespaces (and across platforms) using exp/imp or expdp/im
 
 
 12
-13 RMAN BACKUP, DATA_PUMP
+13 RMAN BACKUP
 14 CLONING
-15 
-16 DATA GUARD
-17
-18 PATCHING
-19 
-20 RESTORES & RECOVERIES
-21 
-22 PERFORMANCE TUNING
-23 TABLESPACES,USER MANAGEMENT
-24 
-25 MULTI TENENT
-26 OEM
-27 SERVICE NOW
-28 SCRIPTING
+15 DataPump
+16 
+17 DataPump
+18 
+19 DG
+20 
+21 restore recover
+22 
+23 PATCH
+24 MULTI
+25 PERFORMANCE_TUNING
+
+DataGuard, Restore & Recoveries, Patching, Tuning
+
+
+alter database add standby logfile
+  2  group 8 '/u01/bsprod/oradata/bsprod/stby08.log' size 50m,
+  3  group 9 '/u01/bsprod/oradata/bsprod/stby09.log' size 50m,
+  4  group 10 '/u01/bsprod/oradata/bsprod/stby10.log' size 50m,
+  5  group 11 '/u01/bsprod/oradata/bsprod/stby11.log' size 50m,
+  6  group 12 '/u01/bsprod/oradata/bsprod/stby12.log' size 50m;
