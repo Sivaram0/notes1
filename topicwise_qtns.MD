@@ -1,4 +1,4 @@
-BASICS:
+BASICS ::
 What is database ?
 What is instance ?
 What is SGA ?
