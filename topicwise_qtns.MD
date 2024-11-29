@@ -57,5 +57,5 @@ ORACLE DATABASE BASICS:
 2. Oracle dba archicture ?
 3. checkpoint LGWR ?
 4. database snapshot vs backup ?
-5. on premiss database  , nobody had sysadmin permissions to take backup ,client want to do take backup , you don't have permissions to take backup ? then what you do ?
+5. on premiss database, nobody had sysadmin permissions to take backup,client want to do take backup, you don't have permissions to take backup ? then what you do ?
    forcelfully reset the password, enter the server
