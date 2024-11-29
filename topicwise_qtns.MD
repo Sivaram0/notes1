@@ -1,5 +1,6 @@
 ORACLE DATABASE BASICS:
 1. What is database?
+`A database is a organized collection of data ,That can be easily accessed data, managed and update the data easily , it s`
 2. What is SGA?
 3. What is PGA?
 4. What is instance?
@@ -11,7 +12,7 @@ ORACLE DATABASE BASICS:
 10. How to check the version and bit version of oracle software?
 11. How to check how many databases are configured on the server?
 12. How to start the database if pfile is not in default location?
-13. What is the difference between ORACLE_BASE and ORACLE_HOME?
+13. What is the difference between ORACLE_BASE and ORACLE_HOME?s
 14. What is the use of oratab file?
 15. How do you check if oracle software installed on a server?
 16. What is  Oracle database's physical and logical structure ?
@@ -57,4 +58,4 @@ ORACLE DATABASE BASICS:
 3. checkpoint LGWR ?
 4. database snapshot vs backup ?
 5. on premiss database  , nobody had sysadmin permissions to take backup ,client want to do take backup , you don't have permissions to take backup ? then what you do ?
-  forcelfully reset the password, enter the server
+   forcelfully reset the password, enter the server
