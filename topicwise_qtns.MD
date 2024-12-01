@@ -59,3 +59,21 @@ ORACLE DATABASE BASICS:
 4. database snapshot vs backup ?
 5. on premiss database, nobody had sysadmin permissions to take backup,client want to do take backup, you don't have permissions to take backup ? then what you do ?
    forcelfully reset the password, enter the server
+     
+     TWO DAYS::
+
+     Dataguard, Restores && Recoveries
+===============================
+
+Tablespace management  OK
+User management        OK
+Backup RMAN/HOT/COLD   OK          
+19c install/upgrade    OK
+Multi_tenent           OK
+Cloning                OK
+Datapump
+Dataguard
+Patching               --
+Restore & Recovories   --
+
+Restore datafile, Restore total datafiles, Restore controlfile, Restore redologfile,
