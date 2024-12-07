@@ -1,5 +1,5 @@
 What is Database ?
-What is SGA,PGA,BACKUPGROUND PROCESSES?
+What is SGA,PGA,BACKGROUND PROCESSES?
 What is Tablespace , types of Tablespaces and purpose of it?
 Create tablespace along with datafile basic parameters like size is enough?
 Create tablespace with big file ?

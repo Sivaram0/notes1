@@ -1,11 +1,16 @@
 ORACLE DATABASE BASICS:
 1. What is database?
-`A database is a organized collection of data ,That can be easily accessed data, managed and update the data easily , it s`
+`database is a oraganised collection of data , It is stored electronically and can be accessed, managed and updated efficiently. database are designed to store large amounts of information and can be accesses easily as we needed , In which we had relational databases, nosql databases,cloud databases so others`
 2. What is SGA?
+`SGA stands for system global area, It is a shared memory area used by the database instance to store data and control information. It is a key component of oracle's archicture and is shared by all processes connectd to the database; in which components like database buffer cache, redo log buffer cache, shared pool[data dictonary cache,]`
 3. What is PGA?
+`PGA for process global area, It is a memory region dedicated to a single oracle database process.`
 4. What is instance?
+`instance is a combination of memory structure and back ground processes thats works together to intrect database , Components of oracle instance: Memory structures, Background processes`
 5. What are background processes?
+`Oracle instance includes several background processses to handle specific tasks. DWWn,LGWR,SMON,PMON,CKPT,ARCn`
 6. what is tablespace?
+
 7. What is oracle database server?
 8. What happens when you kill the manditory background processes ?
 9. How to check how many databases are up and running on the server?
@@ -25,7 +30,7 @@ ORACLE DATABASE BASICS:
 23. How to create the database ?
 24. What are the startup stages ?
 25. What are the shutdown methods ?
-26. What is static and dynamic parameter , How to identify the static or dynamic parameters ?
+26. What is static and dynamic parameter , How to identify the static or dynamic parameters ? 
 27. What is the default block size of oracle database ?
 28. Can we create a tablespace with different block size ?
 29. How to identify the total size of the database?
@@ -45,12 +50,17 @@ ORACLE DATABASE BASICS:
 43. Where do you check the tablespace status and datafile status 
 44. What is SMALL FILE & BIGFILE tablespace ?
 45. What is the Physical structure of the database ?
+
 46. How to identify the tablespace type is permenent or undo or temporary ?
 47. How to verify the status of the tablespace ?
+    `select tablespace_name,status from v$dba_tablespace; `
 48. What is the use of autoextention on ? where do you get the information of autoextention ?
+    ` `
 49. Can we Limit the autoextention ?
+   `yes, alter database datafile '/u01/bsprod/oradata/bsprod/new.dbf' autoextend off;`
 50. What is the difference between resize and add datafile to the tablespace ?
-
+  `we can resize the datafile of already existing one like by using "alter database  datafile '/u01/bsprod/oradata/bsprod/new.dbf' size 6m;`
+  `adding datafile  alter tablespace TBNAME add datafile '/u01/bsprod/oradata/bsprod/new01.dbf' size 2m;`
 ++++++++++++++++++++++++++++++++++++++++++++
 
 1. I had 1.5 tb database to take backup and it will completed this task around 5 hours roughly , so is there any chance to decrease the backup time ?
@@ -62,7 +72,7 @@ ORACLE DATABASE BASICS:
      
      TWO DAYS::
 
-     Dataguard, Restores && Recoveries
+Dataguard, Restores && Recoveries
 ===============================
 
 Tablespace management  OK

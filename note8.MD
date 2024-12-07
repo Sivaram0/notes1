@@ -24,9 +24,6 @@ Identify which quotas are availble for user?
 
 
 ===============================
-earth identified by welcome;
-venus identified by welcome;
-pluto identified by welcome;
 
 
 
@@ -105,3 +102,43 @@ VALUES (3, 'Charlie', 'Brown', 70000, TO_DATE('2024-03-20', 'YYYY-MM-DD'));
 SELECT segment_name, segment_type, bytes / 1024 / 1024 AS size_mb
 FROM user_segments
 WHERE segment_name = 'STUDENTS'; 
+
+
+
+Standby DataGuard:
+
+copy pfile and change parameter
+password file also 
+setup listners
+setup TNS entries
+connect to rman
+rman target=sys/welcome@bsprod auxiliary=sys/welcome@bstest 
+run cmd > duplicate target database for standby from active database nofilename check;
+ add redo log file to auxiliary database as part of build dataguard n+1 stratgy
+recover managed standby database using current logfile disconnect;
+recover managed standby database using current logfile cancel;
+MRP OF/ON 
+show parameter standby 
+alter system set standby_file_management AUTO;
+alter system set log_archive_dest_state_2=defer;
+alter system set log_archive_dest_state_2=enable;
+alter database commit to switchover to standby;
+----------------------------------------------
+alter database add standby logfile
+group 4 '/u01/bsprod/jsdifs/sdfsdf/dsd/alter 
+alter system set log_archive_dest_2='SERVICE=BSPROD LGWR='sync';
+alter database set standby database to maximize availbility;
+
+shut immediate;
+startup mount;
+select protection_mode from v$database;
+recover managed standby database current logfile disconnect;
+recover managed standby atabase current logfile cancel;
+
+========================================
+Hello all I am sivarama, i had total 3+ years of experience in oracle database adminstration, In my experience i worked for two domains like 
+telecomunications and bankings , In which i have handled users creation, password setups, create roles , Assign roles to users as a part of user User_management
+on the  other hand managed tabelespace management like add datafile to tablespace, extend size of datafile similar to that, And had done cloning database for testing
+and development purpose , I have done dester recovery and patching, backups like RMAN,expdp,impdp, Database creation using dbua , database upgradation with dbua.
+
+===============
