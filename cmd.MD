@@ -78,3 +78,14 @@ TRANSPERENT NETWORK SUBSTRATE
 
 PARAMETER FILE MANAGEMENT ::
 
+cd $ORACLE_HOME/dbs >>  LOCATION FOR spfile/pfile/orapwd
+desc v$parameter;
+select name, isinstance_modifiable from v$parameter where name='shared_pool_size';
+ISINSTANCE_MODIFIABLE = TRUE dynamic parameter
+ISINSTANCE_MODIFABLE = FALSE static parameter 
+SCOPE = memory, spfile, both
+
+startup pfile='<location of pfile>' IF WE WANT TO START PFILE WHICH WAS IN DIFFERENT LOCATION
+
+======================================================================================
+
