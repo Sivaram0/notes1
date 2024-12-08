@@ -62,4 +62,19 @@ show parameter db_block_size;
 
 ====================================================================================================================
 
-USER MANAGEMENT::
+NETWORKING ::
+
+lsnrctl start <ORACLE_SID>
+lsnrctl status 
+lsnrctl stop <ORACLE_SID>
+
+tnsping <ORACLE_SID>
+
+vncserver >> FOR GRAPHICAL USER INTERFACE WE NEED TO CONNECT VNC SERVER
+netmgr >> FOR CONNECTING LISTNER SETUP
+TRANSPERENT NETWORK SUBSTRATE
+
+=========================================================================================
+
+PARAMETER FILE MANAGEMENT ::
+
