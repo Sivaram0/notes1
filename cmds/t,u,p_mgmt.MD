@@ -88,6 +88,7 @@ SCOPE = memory, spfile, both
 startup pfile='<location of pfile>' IF WE WANT TO START PFILE WHICH WAS IN DIFFERENT LOCATION
 
 ======================================================================================
+
 USER_MANAGEMENT ::
  Priviliges, Roles, Quotas, Profiles
 
@@ -96,7 +97,7 @@ create user <user_name> identified by <password>;
 drop user <user_name> cascade;
 alter user <user_name> account unlock;
 alter user <user_name> account lock;
-select user_name, account_status from dba_users where username='<user_name>';
+select user_name, account_status from dba_users where username = '<user_name>';
 alter user <user_name> identified by <password>;
 alter user <user_name> profile default;
 alter user <user_name> identified by <password>;
@@ -129,11 +130,9 @@ select RESORCE_NAME, LIMIT from dba_profiles;
 create profile <profile_name> limits  FAILED LOGIN_ATTEMPTS 3, PASSWORD REUSE MAX 3;
 alter user <user_name> profile <profile_name>;
 
-QUOTAS::
+QUOTAS:
 create tablespace <tablespace_name> datafile '/u01/bsprod/oradata/bsprod/abc.dbf' size 2m;
 alter user <user_name> quota 2m on <datafile>;
 desc dba_ts_quotas;
 select table_sapace_name,username,max bytes/1024/1024 from dba_ts_quotas where tablespace_name='<tablespace_name>';
 alter user <user_name> quota 4m on <tablespace>;
-
-
