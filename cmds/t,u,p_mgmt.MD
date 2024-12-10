@@ -19,7 +19,7 @@ alter tablespace <tablespace_name> offline >> read only
 alter tablespace <ablespace_name> online >> read write
 
 VIEWS::
-desc V$tablespace;
+desc v$tablespace;
 select * from v$tablespace;
 select * from dba_tablespace;
 
@@ -56,9 +56,9 @@ SELECT TABLESPACE_NAME from dba_tablespaces order by tablespace_name;
 select contents, count(*) from dba_tablespace order by tablespace_name;
 show parameter UNDO;
 alter system set undo_tablespace ='UNDOTBS2'; >> SET DEFAULT UNDO TABLESPACE
-select tablespace_name,block_size from dba_table_space;
+select tablespace_name,block_size from dba_tablespaces;
 show parameter db_block_size;
-
+ALTER DATABASE TEMPFILE '/u02/oracle/data/lmtemp02.dbf' DROP INCLUDING DATAFILES;
 
 ====================================================================================================================
 
@@ -136,3 +136,15 @@ alter user <user_name> quota 2m on <datafile>;
 desc dba_ts_quotas;
 select table_sapace_name,username,max bytes/1024/1024 from dba_ts_quotas where tablespace_name='<tablespace_name>';
 alter user <user_name> quota 4m on <tablespace>;
+
+====================================
+==========================================
+
+
+Find location of datafile,controlfile,redologfile
+find aletrelogfile
+see instnace status
+see database name
+see total tablespace
+see tablespaces and autoextension status
+see static parameter, dynammic parametr status;
