@@ -21,7 +21,8 @@ alter tablespace <ablespace_name> online >> read write
 VIEWS::
 desc v$tablespace;
 select * from v$tablespace;
-select * from dba_tablespace;
+select * from dba_tablespaces;
+select * from dba_data_files;
 
 --- To VIEW TABLESPACES ---
 
@@ -58,7 +59,7 @@ show parameter UNDO;
 alter system set undo_tablespace ='UNDOTBS2'; >> SET DEFAULT UNDO TABLESPACE
 select tablespace_name,block_size from dba_tablespaces;
 show parameter db_block_size;
-ALTER DATABASE TEMPFILE '/u02/oracle/data/lmtemp02.dbf' DROP INCLUDING DATAFILES;
+ALTER DATABASE TEMPFILE '/u01/oracle/data/lmtemp02.dbf' DROP INCLUDING DATAFILES;
 
 ====================================================================================================================
 
