@@ -121,7 +121,7 @@ ROLES:
 create role <ROLE_NAME>;
 desc dba_roles;
 select role from dba_roles;
-grant connect,create session, create table, so on required privs to <ROLE_NAME>;
+grant connect,create session, create table, [so on required privs] to <ROLE_NAME>;
 grant <ROLE_NAME> to <USER_NAME>;
 drop role <ROLE_NAME>;
 
