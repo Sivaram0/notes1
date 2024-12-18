@@ -17,7 +17,7 @@ alter database datafile '/u01/bsprod/oradata/bsprod/ss1.dbf' resize 5m;
 alter database datafile '/u01/bsprod/oradata/bsprod/ss1.dbf' offline;
 alter tablespace <tablespace_name> offline >> read only
 alter tablespace <ablespace_name> online >> read write
-
+  
 VIEWS::
 desc v$tablespace;
 select * from v$tablespace;
@@ -70,7 +70,7 @@ lsnrctl status
 lsnrctl stop <ORACLE_SID>
 
 tnsping <ORACLE_SID>
-
+network location : cd $ORACLE_HOME/network/admin
 vncserver >> FOR GRAPHICAL USER INTERFACE WE NEED TO CONNECT VNC SERVER
 netmgr >> FOR CONNECTING LISTNER SETUP
 TRANSPERENT NETWORK SUBSTRATE
