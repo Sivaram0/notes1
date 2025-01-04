@@ -86,3 +86,5 @@ alter system set log_arch_='LOCATION=/u01/bsprod/arch/' scope=spfile;
 
 ==================
 restart Devops
+
+rrklxfks
