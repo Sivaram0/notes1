@@ -33,3 +33,10 @@ docker-compose up
 docker-compose up -d
 docker-compose down
 docker-compose ps
+
+FROM setup base image 
+WORKDIR setup base working directory to execute all the cmds, copies etc
+COPY 
+RUN
+EXPOSE
+CMD
