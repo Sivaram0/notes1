@@ -36,7 +36,9 @@ docker-compose ps
 
 FROM setup base image 
 WORKDIR setup base working directory to execute all the cmds, copies etc
+ADD
 COPY 
 RUN
 EXPOSE
+ENTRYPOINT
 CMD
