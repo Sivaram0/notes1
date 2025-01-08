@@ -1,0 +1,82 @@
+@Library('my-shared-library') _
+pipeline {
+    agent any
+
+    stages {
+        stage('Git Checkout Repository') {
+            steps {
+                git url: 'https://git.com', branch: 'main'
+            }
+        }
+
+        stage('Static Code Analysis Check') {
+            steps {
+                script {
+                    // Assuming SonarQube scanner is configured
+                    sonarQube()
+                }
+            }
+        }
+
+        stage('Build the Job') {
+            steps {
+                sh 'mvn clean package'
+                sh 'mvn install'
+            }
+        }
+
+        stage('Make Artifact') {
+            steps {
+                // Add commands for artifact creation (e.g., move artifact to a specific directory)
+            }
+        }
+         stage('Test') {
+            agent {
+                label 'test-agent'  // This stage will run on the agent labeled 'test-agent'
+            }
+            steps {
+                echo 'Running tests...'
+                sh 'echo "Running tests on test-agent"'
+            }
+        }
+
+        stage('Scan Artifact') {
+            steps {
+                // Add scanning logic for the artifact (e.g., using a security scanning tool)
+            }
+        }
+
+        stage('Push the Artifact to S3, Blob') {
+            steps {
+                // Add commands for pushing the artifact to S3 or Azure Blob storage
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t <image_name>:<tag_(build_id)> .'
+                sh 'docker run -d -p 8080:80 --name <container_name> <image_name>:<tag_(build_id)>'
+                sh 'docker push <image_name>:<tag_(build_id)>'
+            }
+        }
+
+        stage('Deploy to Kubernetes') {
+            steps {
+                // Add steps to deploy the Docker image to a Kubernetes cluster
+            }
+        }
+    }
+}
+
+
+// Include parallel builds
+// Include means import shell script attach to the pipeline  rather than inline shell script
+// statsh the artifact
+// use agent for the docker kubernetes
+// Include env_variables, buildtime_variables
+// groovy like try catch 
+// shared library 
+
+// I need to give privileges to the group to access couple of files
+
+Differenece between CI -  C Delivery / Deployment
