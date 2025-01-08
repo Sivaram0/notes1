@@ -24,3 +24,13 @@ terraform workspace select <name_of_env>
 terrafrom workspace new <name_of_env>
 terraform output -JSON
 terrafrom show
+terrafrom console
+
+# write terraform file for ec2, vm, s3, blob_storage
+# terrafrom functions 
+# terraform life cycle
+# state file managemenet to upload in S3,blob storage
+# terraform tests , unit testing 
+# failure handling provisoning 
+# $ENV: TF_LOG='info','debug','error','trace','warn'
+# tfcheckov for infra scaning
