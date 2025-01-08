@@ -42,3 +42,18 @@ RUN
 EXPOSE
 ENTRYPOINT
 CMD
+
+
+bhargav@sivaramaprasad155gmail.onmicrosoft.com
+Qudo137056
+
+jenkins
+siva
+jenkins@366
+
+1.Arifcat management in jenkins azure blob/ amazon S3 bucket optimze performanace and cost reduction by small plans using shell scriting.
+2.Docker images as well same pattern will follow
+3.jenkins pararlell jobs / for building different builds like nodejs, msbuild, 
+
+
+Sleep - 7 Hours
