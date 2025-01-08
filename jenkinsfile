@@ -79,4 +79,4 @@ pipeline {
 
 // I need to give privileges to the group to access couple of files
 
-Differenece between CI -  C Delivery / Deployment
+Differenece between C_Intigration -  C_Delivery / C_Deployment
