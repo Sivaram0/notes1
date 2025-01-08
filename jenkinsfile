@@ -76,7 +76,7 @@ pipeline {
 // Include env_variables, buildtime_variables
 // groovy like try catch 
 // shared library 
-
+// deal with S3 and azure blob stages in jenkins pipeline
 // I need to give privileges to the group to access couple of files
 
 Differenece between C_Intigration -  C_Delivery / C_Deployment
