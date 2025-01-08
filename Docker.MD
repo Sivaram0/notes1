@@ -34,6 +34,9 @@ docker-compose up -d
 docker-compose down
 docker-compose ps
 
+for docker image layers
+docker history <image-name>
+
 FROM setup base image 
 WORKDIR setup base working directory to execute all the cmds, copies etc
 ADD
