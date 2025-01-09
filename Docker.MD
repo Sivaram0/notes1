@@ -60,3 +60,8 @@ jenkins@366
 
 
 Sleep - 7 Hours
+
+
+# serrver side applications backend ressponsible for processing requestes, interacting with the database handling business logics [nodejs,spring,Django etc] 
+
+# client side applications frontend technoliges html , css, angular, react
