@@ -1,0 +1,1 @@
+https://directdevops.blog/2024/12/01/devops-classroom-notes-01-dec-2024/ 

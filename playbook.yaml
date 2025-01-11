@@ -1,0 +1,33 @@
+#nginx install configuration
+- name : install nginx
+  hosts: all
+  become: yes
+  tasks:
+    - name: install and update nginx
+      apt: 
+        name: nginx   
+        update_cache: yes
+        state: present
+
+
+#nginx install configuration
+- name: Install Nginx
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install and update Nginx
+      apt:
+        name: nginx
+        update_cache: yes
+        state: present
+
+#nginx install configuration 
+- name: install nginx
+  hosts: all
+  become: yes
+  tasks:
+    - name: install and update nginx
+      apt:
+        name: nginx
+        update_cache: yes
+        state: present
