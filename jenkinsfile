@@ -74,9 +74,10 @@ pipeline {
 // statsh the artifact
 // use agent for the docker kubernetes
 // Include env_variables, buildtime_variables
-// groovy like try catch 
+// groovy like try catch blocks add to pipeline 
 // shared library 
 // deal with S3 and azure blob stages in jenkins pipeline
-// I need to give privileges to the group to access couple of files
+// I need to give privileges to the group to access couple of files like production builds,test,stage,production env
+
 
 Differenece between C_Intigration -  C_Delivery / C_Deployment
