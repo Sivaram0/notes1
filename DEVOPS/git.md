@@ -21,3 +21,5 @@ git hooks
 web-hooks 
 pull-request
 git lense
+
+feature branch stratigy used in project
