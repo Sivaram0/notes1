@@ -1,0 +1,9 @@
+
+#nginx install yaml playbook
+- name: install nginx
+  hosts: all
+  become: yes
+  tasks:
+   name: install and update nginx
+   update_cache: yes
+   state: present

@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: pod
+metadata:
+  name: frontend-pod
+  lebels:
+    app: F-label
+spec:
+  restartPolicy: always
+  containers:
+   - name: mycontainer
+     image: front-image
+     ports:
+       - containerPort: 80
+----------------------------------------------------------
+

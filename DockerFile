@@ -1,0 +1,113 @@
+
+
+
+## ADD	Add local or remote files and directories.
+## ARG	Use build-time variables.
+# CMD	Specify default commands.
+## COPY	Copy files and directories.
+# ENTRYPOINT	Specify default executable.
+# ENV	Set environment variables.
+# EXPOSE	Describe which ports your application is listening on.
+
+# HEALTHCHECK	Check a container's health on startup.
+## LABEL	Add metadata to an image.
+## MAINTAINER	Specify the author of an image.
+# ONBUILD	Specify instructions for when the image is used in a build.
+# RUN	Execute build commands.
+# SHELL	Set the default shell of an image.
+# STOPSIGNAL	Specify the system call signal for exiting a container.
+## USER	Set user and group ID.
+# VOLUME	Create volume mounts.
+## WORKDIR	Change working directory.
+
+# -------------------------------
+
+#     safe values::
+
+# ARG APP_VERSION=1.0
+# ARG BUILD_ENV=production
+
+
+#==========================================================
+
+#!/bin/bash
+
+# Function to check if the URL is accessible
+# check_url() {
+#   local URL="$1"
+#   echo "Checking URL: $URL"
+  
+#   # Using curl to check URL accessibility (returns 200 OK if accessible)
+#   HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$URL")
+  
+#   if [ "$HTTP_STATUS" -eq 200 ]; then
+#     echo "URL is accessible."
+#   else
+#     echo "Error: URL is not accessible. HTTP Status: $HTTP_STATUS"
+#     exit 1  # Exit script with error code if URL is not accessible
+#   fi
+# }
+
+# # Function to check if the .tar file is valid
+# check_tar_file() {
+#   local TAR_FILE="$1"
+#   echo "Checking tar file: $TAR_FILE"
+  
+#   # Check if file exists
+#   if [ -f "$TAR_FILE" ]; then
+#     # Try extracting the tar file to check if it's valid
+#     if tar -tzf "$TAR_FILE" > /dev/null 2>&1; then
+#       echo "Tar file is valid."
+#     else
+#       echo "Error: Tar file is not valid."
+#       exit 1  # Exit script with error code if tar file is invalid
+#     fi
+#   else
+#     echo "Error: Tar file does not exist."
+#     exit 1  # Exit script with error code if tar file doesn't exist
+#   fi
+# }
+
+# # Check if correct number of arguments is passed
+# if [ "$#" -ne 2 ]; then
+#   echo "Usage: $0 <URL> <Tar File Path>"
+#   exit 1
+# fi
+
+# # Get the URL and Tar file path from the arguments
+# URL="$1"
+# TAR_FILE="$2"
+
+# # Run the checks
+# check_url "$URL"
+# check_tar_file "$TAR_FILE"
+
+# echo "Both URL and tar file are accessible and valid."
+
+# ARG BASE_IMAGE=ubuntu:20.04
+# FROM $BASE_IMAGE
+# LABEL image_owner="sivaramaprasad" \
+#       project='ihub_wealth_aus_98'\
+#       version='1.89'      
+# ADD 'means add local/remote files to container like zipfiles, tar file easyly extact with ADD instruction'
+# COPY 'means copy local file from server to container'
+# RUN 
+# VOLUME /var/read/file/
+# EXPOSE 80
+# ENTRYPOINT ap.java
+# CMD [ "executable" ]
+
+
+ARG version=1.08
+FROM nginx:${version}
+LABEL name="siva"
+LABEL version = '1.89'
+COPY '/temp/html /temp/container/.'
+ADD curl https://192.168.57.zip
+ENV dev=dev
+RUN --mount=type=secret,id=API_KEY,env=API_KEY 
+RUN apt-get update && apt-get install -y
+ENTRYPOINT [ "executable" ]
+EXPOSE 8080
+CMD [ "param1", "param2" ]
+

@@ -1,72 +1,135 @@
-@Library('my-shared-library') _
+@Library('my-shared-library') _  // Reference to your shared library
+
 pipeline {
     agent any
 
-    stages {
-        stage('Git Checkout Repository') {
-            steps {
-                git url: 'https://git.com', branch: 'main'
-            }
-        }
+    parameters {
+        choice(name: 'ENV', choices: ['DEV', 'TEST', 'PROD'], description: 'Select the environment')
+        string(name: 'BUILD', defaultValue: 'xxxx', description: 'Build version')
+        string(name: 'REPO', defaultValue: 'xxxx', description: 'Repository URL')
+    }
 
-        stage('Static Code Analysis Check') {
+    stages {
+        stage('Git Checkout') {
             steps {
                 script {
-                    // Assuming SonarQube scanner is configured
-                    sonarQube()
+                    try {
+                        echo 'Checking out the code from Git repository...'
+                        git branch: 'main', url: 'https://git.com/your-repo.git', credentialsId: 'your-credentials-id'
+                    } catch (Exception e) {
+                        error "Git Checkout failed: ${e.message}"
+                    }
                 }
             }
         }
 
-        stage('Build the Job') {
+        stage('Build') {
             steps {
-                sh 'mvn clean package'
-                sh 'mvn install'
+                script {
+                    try {
+                        echo 'Building the application...'
+                        sh 'mvn clean install'
+                    } catch (Exception e) {
+                        error "Build failed: ${e.message}"
+                    }
+                }
             }
         }
 
-        stage('Make Artifact') {
+        stage('SonarQube Analysis') {
             steps {
-                // Add commands for artifact creation (e.g., move artifact to a specific directory)
-            }
-        }
-         stage('Test') {
-            agent {
-                label 'test-agent'  // This stage will run on the agent labeled 'test-agent'
-            }
-            steps {
-                echo 'Running tests...'
-                sh 'echo "Running tests on test-agent"'
-            }
-        }
-
-        stage('Scan Artifact') {
-            steps {
-                // Add scanning logic for the artifact (e.g., using a security scanning tool)
+                script {
+                    try {
+                        echo 'Running SonarQube analysis...'
+                        sh 'sonar-scanner -Dsonar.projectKey=my_project -Dsonar.sources=src -Dsonar.host.url=http://your-sonar-server -Dsonar.login=your-sonar-token'
+                    } catch (Exception e) {
+                        error "SonarQube scan failed: ${e.message}"
+                    }
+                }
             }
         }
 
-        stage('Push the Artifact to S3, Blob') {
+        stage('Archive Artifacts') {
             steps {
-                // Add commands for pushing the artifact to S3 or Azure Blob storage
+                script {
+                    try {
+                        echo 'Archiving build artifacts...'
+                        archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+                    } catch (Exception e) {
+                        error "Archiving artifacts failed: ${e.message}"
+                    }
+                }
             }
         }
 
-        stage('Build Docker Image') {
+        stage('Docker Image Build') {
             steps {
-                sh 'docker build -t <image_name>:<tag_(build_id)> .'
-                sh 'docker run -d -p 8080:80 --name <container_name> <image_name>:<tag_(build_id)>'
-                sh 'docker push <image_name>:<tag_(build_id)>'
+                script {
+                    try {
+                        echo 'Building Docker image...'
+                        sh 'docker build -t my-app:latest .'
+                    } catch (Exception e) {
+                        error "Docker image build failed: ${e.message}"
+                    }
+                }
             }
         }
 
-        stage('Deploy to Kubernetes') {
+        stage('Docker Image Scan') {
             steps {
-                // Add steps to deploy the Docker image to a Kubernetes cluster
+                script {
+                    try {
+                        echo 'Scanning Docker image for vulnerabilities...'
+                        sh 'docker scan my-app:latest'
+                    } catch (Exception e) {
+                        error "Docker image scan failed: ${e.message}"
+                    }
+                }
+            }
+        }
+
+        stage('Kubernetes Deployment') {
+            steps {
+                script {
+                    try {
+                        echo 'Deploying to Kubernetes...'
+                        sh 'kubectl apply -f k8s/deployment.yaml'
+                    } catch (Exception e) {
+                        error "Kubernetes deployment failed: ${e.message}"
+                    }
+                }
+            }
+        }
+
+        stage('Terraform Infrastructure') {
+            steps {
+                script {
+                    try {
+                        echo 'Running Terraform to manage infrastructure...'
+                        sh 'terraform init'
+                        sh 'terraform apply -auto-approve'
+                    } catch (Exception e) {
+                        error "Terraform execution failed: ${e.message}"
+                    }
+                }
             }
         }
     }
+
+    post {
+        always {
+            echo 'Cleaning up resources...'
+            // Any cleanup actions if necessary (e.g., removing temporary files)
+        }
+        success {
+            echo 'Pipeline executed successfully!'
+        }
+        failure {
+            echo 'Pipeline failed. Check the logs for errors.'
+        }
+    }
 }
+
 
 
 // Include parallel builds
@@ -80,4 +143,4 @@ pipeline {
 // I need to give privileges to the group to access couple of files like production builds,test,stage,production env
 
 
-Differenece between C_Intigration -  C_Delivery / C_Deployment
+Differenece between C_Intigration -  C_Delivery / C_Deploymentx
