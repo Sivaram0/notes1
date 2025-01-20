@@ -51,3 +51,5 @@ pipeline {
 # shared library for storing templetes of pipeline stages like , repeatedly used stages will be stored in the librery , used groovy scripting for writing stages
 
 # worker node[agent] configurations to facilitate dostribute work on masternode
+
+# impliment manual gate approval gate to deploy to production  ||  input message: 'Approve Deployment to Production?', ok: 'Deploy'
