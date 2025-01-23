@@ -29,4 +29,3 @@ jenkins pipeline ?
 git/jenkins[blob,s3,ECR,ACR,],Docker,Terraform == Ansible, Kubernetesgc
 
 azure - vm,vnet,vmss,storage,monetring,iam.arm,load balancer,web_apps, mssql
-
