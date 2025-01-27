@@ -104,3 +104,51 @@ Ansible::
 ansible all -m ping 
 ansible -i inventory.ini -m ping all
 ansible -i inventory.ini -m copy -a "src=tem/XXX dest=/tmp/hd/djhf"
+ansible-playbook -i inventory.ini playbook.yml -f 10 <executes parallel tasks > we can define forks in ansible.cfg # serial: 5  # Run tasks on 5 hosts at a time
+
+
+
+
+
+
+
+
+Docker::
+
+docker info 
+docker help
+docker --version
+
+docker images / docker image ls 
+docker build -t <image_name>:<tag> .
+docker pull <image>:<tag>
+docker push
+docker rm <image_name>:<tag>
+docker run -d --name <container_name> 8080:80 <image_name>:<tag>
+
+docker ps 
+docker ps -a
+docker start <container_name>
+docker stop <container_name>
+docker container prune
+docker exec -it <container_name> <command>
+docker inspect <container_id> or <container_name>
+
+docker network ls
+docker network create <network_name>
+docker network connect <network_name> <container_id>/<conttainer_name>
+
+docker volume ls 
+docker volume create <volume_name>
+docker voluem rm <volume_name>
+docker run -d -v <volume_name>:<container_path> <image_name>
+docker logs <container_id> / <container_name>
+docker stats
+
+docker-compose up
+docker-compose up -d
+docker-compose down
+docker-compose ps
+
+docker history <image_name>
+
